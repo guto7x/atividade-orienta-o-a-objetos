@@ -1,0 +1,25 @@
+class Carro:
+    def __init__(self):
+        self.motor_ligado = False
+        self.movimento = False
+
+    def ligarMotor(self):
+        self.motor_ligado = True
+
+    def desligarMotor(self):
+        self.motor_ligado = False
+
+    def andar(self):
+        if self.motor_ligado:
+            self.movimento = True
+        else:
+            print("O motor está desligado, logo o carro não anda.")
+
+    def parar(self):
+        self.movimento = False
+
+    def exibirStatus(self):
+        status_motor = "Ligado" if self.motor_ligado else "Desligado"
+        status_movimento = "Andando" if self.movimento else "Parado"
+        print(f"status do motor: {status_motor}")
+        print(f"status do movimento: {status_movimento}")l
